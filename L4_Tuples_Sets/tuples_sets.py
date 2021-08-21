@@ -61,6 +61,6 @@ print(set3)
 set4 = set1 | set2
 print(set4)
 
-# find element in set1 but not in set2
+# find elements in set1 but not in set2
 set5 = set1 - set2
 print(set5)
