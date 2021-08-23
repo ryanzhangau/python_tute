@@ -23,3 +23,22 @@ myFile.close()
 myFile = open('myfile.txt', 'r+')
 text = myFile.read(100)
 print(text)
+
+# Read line by line
+myFile = open('myfile.txt') # open file with readonly permission
+for line in myFile:
+    print(line)
+    # remove space
+    print(line.rstrip())
+
+# Alternative way
+myFile.seek(0) # move cursor to very beginning
+lines = myFile.readlines()
+print(lines)
+
+# sometimes we can forget to close file after opening it
+# this method does not need file.close()
+
+with open('myfile.txt') as myFile:
+    lines = myFile.readlines()
+
